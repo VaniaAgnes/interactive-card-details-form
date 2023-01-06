@@ -38,7 +38,7 @@ Users should be able to:
 - Live Site URL: [https://vaniaagnes.github.io/interactive-card-details-form/](https://vaniaagnes.github.io/interactive-card-details-form/)
 
 ## My process
-So first thing first, i started this assignment by making the html, then continue with css then javascript 
+So first thing first, i started this assignment by making the html, then continue with css then javascript. Once the code is done i have to make sure there is no misspell to ensure that the code can run smoothly
 
 ### Built with
 

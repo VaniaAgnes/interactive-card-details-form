@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title> Vania Agnes | Interactive Card Detail Form </title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="left_sections">
+          <div class="the_cards">
+            <div class="front_cards">
+              <img
+                src="./images/card-logo.svg"
+                alt="logo of the card"
+                class="card_logos"
+              />
+              <div class="card_container">
+                <img src="./images/bg-card-front.png" alt="front of the card" />
+                <h1 id="number">0000 0000 0000 0000</h1>
+                <div class="info_card">
+                  <span id="name">Elizabeth Christina</span>
+                  <span id="date">
+                    <span id="month">00</span>
+                    /
+                    <span id="year">0000</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="back_cards">
+              <img src="./images/bg-card-back.png" alt="back of the card" />
+              <span id="cvc">000</span>
+            </div>
+          </div>
+        </div>
+        <div class="the_right_sections">
+          <form>
+            <div class="grid_one">
+              <label for="card_name">Name in the Cardholder</label>
+              <input
+                type="text"
+                placeholder="e.g. Elizabeth Christina"
+                id="card_name"
+                required
+              />
+            </div>
+            <div class="grid_two">
+              <label for="card_number">Card Numbers</label>
+              <input
+                type="number"
+                oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                minlength="16"
+                maxlength="16"
+                placeholder="e.g. 1234 4567 3498 2397"
+                id="card_number"
+                required
+              />
+            </div>
+            <div class="card_information">
+              <div id="card_dates">
+                <label for="card_dates">Expired Date (MM/YYYY)</label>
+                <div class="two_inp">
+                  <div>
+                    <input
+                      type="number"
+                      placeholder="MM"
+                      oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                      minlength="2"
+                      maxlength="2"
+                      id="card_month"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <input
+                    oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                      type="number"
+                      minlength="4"
+                      maxlength="4"
+                      placeholder="YYYY"
+                      id="card_year"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="grid_four">
+                <label for="card_cvc">CVC</label>
+                <input type="number" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3" placeholder="e.g. 193" id="card_cvc" required />
+              </div>
+            </div>
+            <button id="submit_btn" type="submit"> Press to Confirm</button>
+          </form>
+          <div class="thank hidden">
+            <img src="./images/icon-complete.svg" alt="Completed" />
+            <h1>Thank you ^-^</h1>
+            <p> We have added the card details! </p>
+            <button> Press to Continue</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Completed state start -->
+    <script src="https://unpkg.com/imask"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
